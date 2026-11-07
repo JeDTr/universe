@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Universe — Nhìn về Trái Đất</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <div id="loading">
+      <div class="loading-box">
+        <div class="loading-title">UNIVERSE</div>
+        <div class="loading-bar"><div id="loading-fill"></div></div>
+        <div id="loading-text">Đang khởi tạo…</div>
+      </div>
+    </div>
+
+    <div id="hud" class="hidden">
+      <header class="panel top">
+        <div class="brand">UNIVERSE</div>
+        <nav class="modes">
+          <button data-mode="mars" class="active"><kbd>1</kbd> Quỹ đạo Sao Hỏa</button>
+          <button data-mode="ship"><kbd>2</kbd> Tàu vũ trụ</button>
+          <button data-mode="orbit"><kbd>3</kbd> Quan sát</button>
+        </nav>
+        <div class="time">
+          <span id="date">—</span>
+          <button data-speed="0" title="Tạm dừng">❚❚</button>
+          <button data-speed="1" class="active">1 ngày/s</button>
+          <button data-speed="10">10</button>
+          <button data-speed="100">100</button>
+        </div>
+      </header>
+
+      <aside class="panel bodies">
+        <div class="panel-title">Thiên thể <span id="mission-count"></span></div>
+        <ul id="body-list"></ul>
+      </aside>
+
+      <section class="panel info" id="info"></section>
+
+      <footer class="panel help" id="help"></footer>
+
+      <div id="ship-hud" class="hidden">
+        <div class="crosshair"></div>
+        <div class="scan" id="scan">
+          <div id="scan-text"></div>
+          <div class="scan-bar"><div id="scan-fill"></div></div>
+        </div>
+        <div class="warn" id="warn"></div>
+      </div>
+
+      <div id="toast"></div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
